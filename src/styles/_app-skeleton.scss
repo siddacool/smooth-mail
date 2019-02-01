@@ -1,0 +1,70 @@
+smooth-mail-app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 72px auto;
+  min-height: 100vh;
+
+  @include desktop {
+    grid-template-columns: 248px auto;
+
+    &[workspace = 'compact'] {
+      grid-template-columns: 80px auto;
+    }
+  }
+
+  nav {
+    align-items: center;
+    background-color: grey;
+    display: flex;
+    grid-column-end: span 2;
+    grid-column-start: 1;
+    padding: 0 24px;
+
+    p {
+      font-size: 22px;
+      font-weight: 600;
+      margin-left: 16px;
+    }
+  }
+
+  aside {
+    background-color: black;
+    height: 100vh;
+    left: -100vw;
+    min-width: 96px;
+    position: fixed;
+    width: 100vw;
+
+    &.show {
+      left: 0;
+    }
+
+    @include desktop {
+      grid-row-start: 2;
+      min-width: initial;
+      position: static;
+      width: initial;
+    }
+  }
+
+  main {
+    background-color: #e8e8e8;
+
+    @include desktop {
+      grid-column-start: 2;
+    }
+  }
+
+  compact-toggle {
+    display: inline-block;
+
+    a {
+      display: block;
+    }
+
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
