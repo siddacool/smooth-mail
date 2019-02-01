@@ -1,9 +1,13 @@
-import SomeContainer from '../partials/SomeContainer';
+import Nav from '../partials/Nav';
 
 export default function () {
   document.getElementById('wrapper').innerHTML = `
     <smooth-mail-app>
-      ${SomeContainer()}
+      <aside>
+      </aside>
+      ${Nav()}
+      <main>
+      </main>
     </smooth-mail-app>
   `;
 }

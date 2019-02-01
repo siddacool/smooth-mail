@@ -1,13 +1,11 @@
-import LogoElm from './LogoElm';
-import OneBtn from './OneBtn';
+import CompactToggle from './CompactToggle';
 
 // Main component
 class SmoothMailApp extends HTMLElement {}
 
 const componentCollection = {
-  'logo-elm': LogoElm,
-  'one-btn': OneBtn,
   'smooth-mail-app': SmoothMailApp,
+  'compact-toggle': CompactToggle,
 };
 
 Object.keys(componentCollection).forEach((key) => {
